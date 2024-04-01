@@ -1,3 +1,5 @@
+ARG ARCH=amd64
+
 # Pull base image.
 FROM base/archlinux:latest
 
@@ -25,47 +27,47 @@ RUN sudo ./strap.sh
 RUN sudo pacman -Syu
 
 # Reconnaissance Tools
-RUN apt-get install -y subfinder
-RUN apt-get install -y sublist3r 
-RUN apt-get install -y recon-ng 
-RUN apt-get install -y whatweb 
-RUN apt-get install -y theharvester
+RUN sudo pacman -S subfinder
+RUN sudo pacman -S sublist3r 
+RUN sudo pacman -S recon-ng 
+RUN sudo pacman -S whatweb 
+RUN sudo pacman -S theharvester
 
 # Reverse Engineering Tools
-RUN apt-get install -y radare2
+RUN sudo pacman -S radare2
 
 # Network Scanning Tools
-RUN apt-get install -y nmap
-RUN apt-get install -y httprobe 
-RUN apt-get install -y amass 
-RUN apt-get install -y masscan
-RUN apt-get install -y sslscan 
-RUN apt-get install -y nikto
+RUN sudo pacman -S nmap
+RUN sudo pacman -S httprobe 
+RUN sudo pacman -S amass 
+RUN sudo pacman -S masscan
+RUN sudo pacman -S sslscan 
+RUN sudo pacman -S nikto
 
 # Web Application Testing Tools
-RUN apt-get install -y wafw00f
-RUN apt-get install -y ffuf 
-RUN apt-get install -y gobuster
+RUN sudo pacman -S wafw00f
+RUN sudo pacman -S ffuf 
+RUN sudo pacman -S gobuster
 
 # Wireless Security Tools
-RUN apt-get install -y aircrack-ng 
+RUN sudo pacman -S aircrack-ng 
 
 # Database Testing Tools
-RUN apt-get install -y sqlmap 
+RUN sudo pacman -S sqlmap 
 
 # Password Cracking Tools
-RUN apt-get install -y hydra 
-RUN apt-get install -y john
-RUN apt-get install -y hashcat
+RUN sudo pacman -S hydra 
+RUN sudo pacman -S john
+RUN sudo pacman -S hashcat
 
 # Network Traffic Analysis Tools
-RUN apt-get install -y tcpdump
+RUN sudo pacman -S tcpdump
 
 # Exploitation
-RUN apt-get install -y metasploit-framework
+RUN sudo pacman -S metasploit-framework
 
 # Set working directory
-WORKDIR /home/
+WORKDIR /home/AbyssalHex
 
 # Define default command.
 CMD ["/bin/bash"]
