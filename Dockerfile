@@ -18,7 +18,7 @@ RUN echo $HOSTNAME > /etc/hostname
 RUN useradd -m -s /bin/bash abyssal && \
     echo 'AbyssalHex ALL=(ALL) NOPASSWD: ALL' >> /etc/sudoers
 
-# Repositories BlackArch
+# Repositories BlackArch > https://blackarch.org/tools.html
 # Run https://blackarch.org/strap.sh as root and follow the instructions.
 RUN curl -O https://blackarch.org/strap.sh
 
