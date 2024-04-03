@@ -1,5 +1,4 @@
 # AbyssalHex
-# VaultHacking with Docker
 
 **This image in Docker that is integrated with the tools of pentester. It has more basic tools for working with systems or web servers.**
 
